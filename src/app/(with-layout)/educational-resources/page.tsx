@@ -1,9 +1,9 @@
-import React from 'react';
+
 
 const EducationalResources = () => {
     return (
         <div>
-            <h1>Educational resources</h1>
+            <h1 className='text-white'>Educational resources</h1>
         </div>
     );
 };

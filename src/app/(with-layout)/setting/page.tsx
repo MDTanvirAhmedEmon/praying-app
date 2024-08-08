@@ -2,7 +2,7 @@
 const Setting = () => {
     return (
         <div>
-            <h1>Setting</h1>
+            <h1 className='text-white'>Setting</h1>
         </div>
     );
 };

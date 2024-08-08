@@ -1,0 +1,15 @@
+li.ant-pagination-item.ant-pagination-item-1.ant-pagination-item-active {
+    background-color: #F0BE1B;
+    border: #F0BE1B
+}
+:where(.css-dev-only-do-not-override-137z5ef).ant-pagination .ant-pagination-item-active a {
+    color: black;
+}
+span.anticon.anticon-right svg{
+    font-size: 15px;
+    color: white;
+}
+span.anticon.anticon-left svg{
+    font-size: 15px;
+    color: white;
+}

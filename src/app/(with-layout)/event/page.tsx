@@ -2,7 +2,7 @@
 const Event = () => {
     return (
         <div>
-            <h1>Event</h1>
+            <h1 className='text-white'>Event</h1>
         </div>
     );
 };

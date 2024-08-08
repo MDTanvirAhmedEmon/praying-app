@@ -38,10 +38,10 @@ export default function DashBoardLayout({
                         },
                     }}
                 >
-                    <Header style={{ backgroundColor: "white", width: "100%" }}><HeaderContent toggleCollapsed={toggleCollapsed}></HeaderContent></Header>
+                    <Header style={{ backgroundColor: "white", width: "100%", height: "90px" }}><HeaderContent toggleCollapsed={toggleCollapsed}></HeaderContent></Header>
                 </ConfigProvider>
 
-                <Content> <h1 className="text-black"></h1>{children}</Content>
+                <Content style={{ backgroundColor: "#5A015E", borderTopLeftRadius: "10px", padding: "30px" }}> <h1 className="text-black"></h1>{children}</Content>
             </Layout>
         </Layout>
     );

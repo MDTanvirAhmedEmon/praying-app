@@ -1,9 +1,8 @@
-import React from 'react';
 
 const AccountsDetails = () => {
     return (
         <div>
-            <h1>Accounts details</h1>
+            <h1 className='text-white'>Accounts details</h1>
         </div>
     );
 };

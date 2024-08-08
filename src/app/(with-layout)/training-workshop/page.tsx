@@ -1,9 +1,9 @@
-import React from 'react';
+
 
 const TrainingAndWorkshop = () => {
     return (
         <div>
-            <h1>Training and Workshop</h1>
+            <h1 className='text-white'>Training and Workshop</h1>
         </div>
     );
 };

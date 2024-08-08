@@ -2,7 +2,7 @@
 const OrderList = () => {
     return (
         <div>
-            <h1>Order list</h1>
+            <h1 className='text-white'>Order list</h1>
         </div>
     );
 };
