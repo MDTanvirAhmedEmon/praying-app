@@ -1,7 +1,8 @@
+// "use client";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { StyleProvider } from "@ant-design/cssinjs";
+// import { StyleProvider } from "@ant-design/cssinjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <StyleProvider hashPriority="high">
+    // <StyleProvider hashPriority="high">
       <html lang="en">
         <body className={inter.className}>{children}</body>
       </html>
-    </StyleProvider>
+    // </StyleProvider>
   );
 }
