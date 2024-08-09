@@ -1,9 +1,10 @@
+import UploadEbook from "@/components/(withLayout)/EducationalResources/UploadEbook";
 
 
 const EducationalResources = () => {
     return (
         <div>
-            <h1 className='text-white'>Educational resources</h1>
+           <UploadEbook></UploadEbook>
         </div>
     );
 };

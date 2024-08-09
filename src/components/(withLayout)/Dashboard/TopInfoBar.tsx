@@ -1,5 +1,5 @@
-import user from '../../../../assets/dashboard-icon/user.svg'
-import profit from '../../../../assets/dashboard-icon/profit.svg'
+import user from '../../../assets/dashboard-icon/user.svg'
+import profit from '../../../assets/dashboard-icon/profit.svg'
 import Image from 'next/image';
 
 const TopInfoBar = () => {

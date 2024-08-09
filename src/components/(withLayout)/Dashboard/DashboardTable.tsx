@@ -1,5 +1,5 @@
 
-import { ConfigProvider, Table } from "antd";
+import {  Table } from "antd";
 import './DashboardTable.css'
 
 
@@ -74,7 +74,7 @@ const DashboardTable = () => {
 
     return (
         <div>
-            <ConfigProvider
+            {/* <ConfigProvider
                 theme={{
                     components: {
                         Table: {
@@ -88,10 +88,10 @@ const DashboardTable = () => {
                         },
                     },
                 }}
-            >
+            > */}
                 <Table align="center" style={{}} dataSource={dataSource} columns={columns}/>
 
-            </ConfigProvider>
+            {/* </ConfigProvider> */}
 
         </div>
     );

@@ -1,8 +1,6 @@
 "use client";
-
 import { Button, ConfigProvider, Table } from "antd";
 import { ColumnsType } from "antd/es/table";
-import Link from "next/link";
 import disable from '../../../assets/account-details/disable-account.svg'
 import Image from "next/image";
 import { useState } from "react";
@@ -38,6 +36,14 @@ const AccountsDetailsTable = () => {
         { key: '6', serial: '6', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
         { key: '7', serial: '7', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
         { key: '8', serial: '8', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '9', serial: '9', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '10', serial: '10', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '11', serial: '11', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '12', serial: '12', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '13', serial: '13', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '14', serial: '14', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '15', serial: '15', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
+        { key: '16', serial: '16', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
     ];
 
     const columns: ColumnsType<{ key: string; serial: string; name: string; email: string; date: string }> = [
@@ -60,26 +66,26 @@ const AccountsDetailsTable = () => {
 
     return (
         <>
-            <ConfigProvider
+            {/* <ConfigProvider
                 theme={{
                     components: {
                         Table: {
                             colorBgContainer: "#F0BE1B",
                             colorText: "black",
-                            headerBg: "#544309",
+                            headerBg: "#360138",
                             headerColor: "white",
                             borderColor: "black",
                         },
                     },
                 }}
-            >
+            > */}
                 <Table
                     align="center"
                     dataSource={dataSource}
                     columns={columns}
                 />
 
-            </ConfigProvider>
+            {/* </ConfigProvider> */}
             <BlockAccoutModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></BlockAccoutModal>
         </>
     );

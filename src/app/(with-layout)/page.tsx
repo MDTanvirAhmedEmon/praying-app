@@ -1,8 +1,9 @@
 
-import AreaChartBox from '@/components/(withLayout)/Content/Dashboard/AreaChartBox';
-import BarChartBox from '@/components/(withLayout)/Content/Dashboard/BarChartBox';
-import DashboardTable from '@/components/(withLayout)/Content/Dashboard/DashboardTable';
-import TopInfoBar from '@/components/(withLayout)/Content/Dashboard/TopInfoBar';
+
+import AreaChartBox from '@/components/(withLayout)/Dashboard/AreaChartBox';
+import BarChartBox from '@/components/(withLayout)/Dashboard/BarChartBox';
+import DashboardTable from '@/components/(withLayout)/Dashboard/DashboardTable';
+import TopInfoBar from '@/components/(withLayout)/Dashboard/TopInfoBar';
 import React from 'react';
 
 const Dashboard = () => {
@@ -10,12 +11,13 @@ const Dashboard = () => {
         <div>
             <TopInfoBar></TopInfoBar>
 
-            <div className=''>
-                {/* <AreaChartBox></AreaChartBox>
-                <BarChartBox></BarChartBox> */}
+            <div className='pt-8 pr-8 flex gap-8'>
+                <AreaChartBox></AreaChartBox>
+                <BarChartBox></BarChartBox>
+
             </div>
             <div className='mt-8 mr-8'>
-                
+
                 <DashboardTable></DashboardTable>
             </div>
         </div>

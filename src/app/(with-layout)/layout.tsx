@@ -24,7 +24,7 @@ export default function DashBoardLayout({
     return (
 
         <Layout>
-            <Sider collapsed={collapsed} style={{ height: "100vh", backgroundColor: "white" }} width="16%">
+            <Sider trigger={null} collapsible collapsed={collapsed} style={{ height: "100vh", backgroundColor: "white" }} width="16%">
                 <SiderContent></SiderContent>
                 <MenuContent collapsed={collapsed}></MenuContent>
             </Sider>
@@ -41,7 +41,23 @@ export default function DashBoardLayout({
                     <Header style={{ backgroundColor: "white", width: "100%", height: "90px" }}><HeaderContent toggleCollapsed={toggleCollapsed}></HeaderContent></Header>
                 </ConfigProvider>
 
+                <ConfigProvider
+                    theme={{
+                        components: {
+                            Table: {
+                            
+                                bodySortBg: "#F0BE1B",
+                                borderColor: "black",
+                                headerBg: "#544309",
+                                headerColor: "white",
+                                colorBgContainer: "#F0BE1B",
+                                colorText: "black",
+                            },
+                        },
+                    }}
+                >
                 <Content style={{ backgroundColor: "#5A015E", borderTopLeftRadius: "10px", padding: "30px" }}> <h1 className="text-black"></h1>{children}</Content>
+                </ConfigProvider>
             </Layout>
         </Layout>
     );
