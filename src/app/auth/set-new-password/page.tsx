@@ -1,7 +1,9 @@
-import ForgotPasswordForm from '@/components/auth/ForgotPassword/ForgotPasswordForm';
-import loginImg from '../../../assets/login/login-image.png'
+import SetNewPasswordForm from '@/components/auth/SetNewPassword/SetNewPasswordForm';
+import loginImg from '../../../assets/login/login-image.png';
 
-const ForgotPassword = () => {
+
+const SetNewPassword = () => {
+
     const imageStyle = {
         backgroundImage: `URL(${loginImg.src})`,
         backgroundSize: "cover",
@@ -10,11 +12,12 @@ const ForgotPassword = () => {
     };
 
 
+
     return (
         <div style={imageStyle}>
             <div className='w-full h-full bg-[#59015efa]'>
                 <div className=' h-full flex items-center justify-center'>
-                    <ForgotPasswordForm></ForgotPasswordForm>
+                    <SetNewPasswordForm></SetNewPasswordForm>
                 </div>
 
             </div>
@@ -22,4 +25,4 @@ const ForgotPassword = () => {
     );
 };
 
-export default ForgotPassword;
+export default SetNewPassword;
