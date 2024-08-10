@@ -1,15 +1,11 @@
-
-import { Button, message, Modal, Typography, Upload, UploadProps } from "antd";
+import { Button, ConfigProvider, message, Modal, Typography, Upload, UploadProps } from "antd";
 import { FiUpload } from "react-icons/fi";
-import type { FormProps } from 'antd';
-import { Checkbox, Form, Input } from 'antd';
+import { Form, Input } from 'antd';
 import TextArea from "antd/es/input/TextArea";
-
 
 const EbookUploadModal = ({ isModalOpen, handleOk, handleCancel }: any) => {
     const props: UploadProps = {
         name: 'file',
-        action: 'https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload',
         headers: {
             authorization: 'authorization-text',
         },
@@ -30,55 +26,110 @@ const EbookUploadModal = ({ isModalOpen, handleOk, handleCancel }: any) => {
     };
 
     return (
+        <Modal
+            footer={null}
+            width={800}
+            centered
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+        >
+            <Typography.Title
+                style={{ color: "#5A015E" }}
+                level={2}
+                className="mb-3"
+            >
+                E-Book Upload
+            </Typography.Title>
 
-        <Modal width={800} centered open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-            <div className="mb-4">
-                <Typography.Title style={{ color: "#5A015E" }} level={2}>E-Book Upload</Typography.Title>
-                <Typography.Text style={{ fontSize: "18px" }}>E-Book Cover Image</Typography.Text>
-            </div>
-
-            <Upload style={{}} className=" cursor-pointer " {...props}>
-                <div className="w-[752px] h-[100px] border-2 border-[#5A015E] border-dashed rounded-lg flex items-center justify-center">
-                    <FiUpload className="w-7 h-7 mr-3 text-[#5A015E]" /> <p className=" text-lg text-[#5A015E]">Upload Image</p>
-                </div>
-            </Upload>
-
-            {/* form */}
-
+            {/* Form */}
             <Form
-                className="mt-5 w-[752px]"
                 name="basic"
-                labelCol={{ span: 8 }}
-                wrapperCol={{ span: 16 }}
-                style={{ maxWidth: 752 }}
+                labelCol={{ span: 24 }}
+                wrapperCol={{ span: 24 }}
+                style={{ maxWidth: '100%' }}
                 layout="vertical"
                 initialValues={{ remember: true }}
                 onFinish={onFinish}
                 autoComplete="off"
             >
+                <div className="mb-4">
+                    <Typography.Text style={{ fontSize: "18px" }}>
+                        E-Book Cover Image
+                    </Typography.Text>
+                </div>
+                {/* Upload Image */}
                 <Form.Item
-                    className="w-full"
-                    style={{width: "752px"}}
-                    label="Name"
-                    name="username"
-                    rules={[{ required: true, message: 'Please input your username!' }]}
+                    className="mb-4 "
+                    name="imageUpload"
                 >
-                    <Input />
+                    <Upload className=" w-full" {...props}>
+                        <div className="w-[752px] h-[100px] border border-[#5A015E] border-dashed rounded-lg flex items-center justify-center cursor-pointer">
+                            <FiUpload className="w-7 h-7 mr-3 text-[#5A015E]" />
+                            <p className="text-lg text-[#5A015E]">Upload Image</p>
+                        </div>
+                    </Upload>
                 </Form.Item>
 
+                {/* Name Input */}
+                <Form.Item
 
-
-                <Form.Item label="Short Description">
-                    <TextArea rows={4} />
+                    label={<span style={{ fontSize: "18px" }}>Name</span>}
+                    name="name"
+                    rules={[{ required: true, message: 'Please input your name!' }]}
+                >
+                    <Input placeholder="Enter Name..." className="border-primary" style={{ padding: "10px" }} />
                 </Form.Item>
 
-                <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                    <Button type="primary" htmlType="submit">
-                        Submit
-                    </Button>
+                {/* Short Description */}
+                <Form.Item
+                    label={<span style={{ fontSize: "18px" }}>Short Description</span>}
+                    name="description"
+                >
+                    <TextArea className="border-primary hover:border-primary" placeholder="Type here..." rows={6} />
+                </Form.Item>
+
+                {/* Upload File */}
+                <div className="mb-4">
+                    <Typography.Text style={{ fontSize: "18px" }}>
+                        Attach File
+                    </Typography.Text>
+                </div>
+                <Form.Item
+                    className="mb-3"
+                    name="fileUpload"
+                >
+                    <Upload {...props}>
+                        <div className="w-[752px] h-[140px] border border-[#5A015E] border-dashed rounded-lg flex items-center justify-center cursor-pointer">
+                            <FiUpload className="w-7 h-7 mr-3 text-[#5A015E]" />
+                            <p className="text-lg text-[#5A015E]">Upload File</p>
+                        </div>
+                    </Upload>
+                </Form.Item>
+
+                {/* Submit Button */}
+                <Form.Item
+                    className="mt-6"
+                >
+                    <ConfigProvider
+                        theme={{
+                            components: {
+                                Button: {
+                                    defaultHoverBg: "#5A015E",
+                                    defaultHoverColor: "white",
+                                    defaultActiveBg: "#5A015E",
+                                    defaultActiveColor: "white",
+                                },
+                            },
+                        }}
+                    >
+                        <Button block className=" bg-primary text-white text-xl py-8 border-none hover:bg-primary" htmlType="submit">
+                            Upload
+                        </Button>
+                    </ConfigProvider>
+
                 </Form.Item>
             </Form>
-
         </Modal>
     );
 };

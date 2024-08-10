@@ -35,6 +35,7 @@ export default function DashBoardLayout({
                             Layout: {
                                 headerPadding: "0 0px"
                             },
+
                         },
                     }}
                 >
@@ -45,7 +46,7 @@ export default function DashBoardLayout({
                     theme={{
                         components: {
                             Table: {
-                            
+
                                 bodySortBg: "#F0BE1B",
                                 borderColor: "black",
                                 headerBg: "#544309",
@@ -56,7 +57,7 @@ export default function DashBoardLayout({
                         },
                     }}
                 >
-                <Content style={{ backgroundColor: "#5A015E", borderTopLeftRadius: "10px", padding: "30px" }}> <h1 className="text-black"></h1>{children}</Content>
+                    <Content style={{ backgroundColor: "#5A015E", borderTopLeftRadius: "10px", padding: "30px" }}> <h1 className="text-black"></h1>{children}</Content>
                 </ConfigProvider>
             </Layout>
         </Layout>

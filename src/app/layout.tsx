@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ConfigProvider } from "antd";
 // import { StyleProvider } from "@ant-design/cssinjs";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,9 +19,24 @@ export default function RootLayout({
 }>) {
   return (
     // <StyleProvider hashPriority="high">
-      <html lang="en">
+    <html lang="en">
+      <ConfigProvider
+        theme={{
+          components: {
+            Input: {
+              hoverBorderColor: "#5A015E",
+              activeBorderColor: "#5A015E",
+            },
+            Pagination: {
+              itemActiveBg: "black",
+              itemBg: "transparent",
+            },
+          },
+        }}
+      >
         <body className={inter.className}>{children}</body>
-      </html>
+      </ConfigProvider>
+    </html>
     // </StyleProvider>
   );
 }

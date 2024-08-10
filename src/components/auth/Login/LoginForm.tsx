@@ -52,7 +52,7 @@ const LoginForm = () => {
                             <Form.Item name="remember" valuePropName="checked" noStyle>
                                 <Checkbox className=' text-white text-md hover:text-white'>Remember password</Checkbox>
                             </Form.Item>
-                            <Link className=' text-white text-md hover:text-white' href="">Forgot password</Link>
+                            <Link className=' text-white text-md hover:text-white' href="/auth/forgot-password">Forgot password</Link>
                         </Flex>
                     </Form.Item>
 

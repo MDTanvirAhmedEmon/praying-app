@@ -1,6 +1,7 @@
 "use client";
 import { Button, Checkbox, Form, Input, Flex, ConfigProvider } from 'antd';
 import { Typography } from 'antd';
+import Link from 'next/link';
 const ForgotPasswordForm = () => {
 
     const onFinish = (values: any) => {
@@ -27,7 +28,7 @@ const ForgotPasswordForm = () => {
                     layout="vertical"
                     className=' bg-[#71cde044] py-28 px-10 rounded-2xl w-[450px] border-2 border-[#400c42]'
                 >
-                    <Typography.Title level={4} style={{ color: "white"}} className=' text-center '>Forgot Password</Typography.Title>
+                    <Typography.Title level={4} style={{ color: "white" }} className=' text-center '>Forgot Password</Typography.Title>
                     <Form.Item
                         name="username"
                         label="Email"
@@ -50,9 +51,9 @@ const ForgotPasswordForm = () => {
                                 },
                             },
                         }} wave={{ disabled: true }}>
-                            <Button className=' bg-[#5A015E] text-white px-6 py-5' htmlType="submit">
+                            <Link href={'/auth/set-new-password'}><Button className=' bg-[#5A015E] text-white px-6 py-5' htmlType="submit">
                                 Send Code
-                            </Button>
+                            </Button></Link>
                         </ConfigProvider>
 
                     </Form.Item>
