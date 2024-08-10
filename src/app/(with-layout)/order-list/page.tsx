@@ -1,9 +1,16 @@
+import OrderHeader from "@/components/(withLayout)/OrderList/OrderHeader";
+import OrderTable from "@/components/(withLayout)/OrderList/OrderTable";
 
 const OrderList = () => {
     return (
-        <div>
-            <h1 className='text-white'>Order list</h1>
-        </div>
+        <>
+            <div>
+                <OrderHeader></OrderHeader>
+            </div>
+            <div className="mt-8">
+                <OrderTable></OrderTable>
+            </div>
+        </>
     );
 };
 

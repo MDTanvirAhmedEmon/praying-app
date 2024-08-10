@@ -31,6 +31,7 @@ export default function RootLayout({
               itemActiveBg: "black",
               itemBg: "transparent",
             },
+
           },
         }}
       >

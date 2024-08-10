@@ -8,18 +8,27 @@ const HeaderContent = ({ toggleCollapsed }: any) => {
 
     const pathname = usePathname()
     console.log(pathname);
+
+
     const formatPathname = (path: string) => {
-        return path
-            .replace(/^\/|\/$/g, '') // Remove leading and trailing slashes
-            .split('/') // Split the path into segments
-            .map(segment =>
-                segment
-                    .split('-') // Split each segment by hyphens
-                    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize each word
-                    .join(' ') // Join words with spaces
-            )
-            .join(' / '); // Join segments with a separator
+    // Remove leading and trailing slashes
+    path = path.replace(/^\/|\/$/g, '');
+    
+    // Remove dynamic segments (e.g., trailing numbers)
+    const segments = path.split('/').filter(segment => isNaN(Number(segment)));
+    
+    // Format the path
+    return segments
+        .map(segment =>
+            segment
+                .split('-') // Split each segment by hyphens
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize each word
+                .join(' ') // Join words with spaces
+        )
+        .join(' / '); // Join segments with a separator
     };
+
+    
     const formattedPathname = pathname === '/' ? 'Dashboard' : formatPathname(pathname);
 
 
