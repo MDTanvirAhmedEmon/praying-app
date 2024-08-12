@@ -28,8 +28,8 @@ const MenuContent = ({ collapsed }: any) => {
         {
             key: '9', icon: <Image src={setting} width={30} height={30} alt="dashboard" />, children: [
                 { key: '10', label: <Link href={`/setting/about-us`}>About us</Link> },
-                { key: '11', label: <Link href={`/`}>Terms & Condition</Link> },
-                { key: '12', label: <Link href={`/`}>Privacy Policy</Link> },
+                { key: '11', label: <Link href={`/setting/terms-and-conditions`}>Terms & Condition</Link> },
+                { key: '12', label: <Link href={`/setting/privacy-policy`}>Privacy Policy</Link> },
             ], label: "Setting"
         },
 

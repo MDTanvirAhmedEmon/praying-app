@@ -1,0 +1,9 @@
+.ql-toolbar.ql-snow {
+    border: none;
+    border-bottom: 1px solid #00000038;
+    display: flex;
+    justify-content: end;
+}
+.ql-container.ql-snow {
+    border: none;
+}

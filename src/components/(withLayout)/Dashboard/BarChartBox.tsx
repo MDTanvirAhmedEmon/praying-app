@@ -66,7 +66,7 @@ const BarChartBox = () => {
           <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
           <YAxis />
           <Tooltip />
-          <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
+          <CartesianGrid horizontal={true} vertical={false} stroke="black" strokeDasharray="0" />
           <Bar background={false} dataKey="pv" fill="#232323" stroke="#000f25" />
         </BarChart>
       </ResponsiveContainer>

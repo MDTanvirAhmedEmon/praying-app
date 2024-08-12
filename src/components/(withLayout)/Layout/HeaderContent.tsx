@@ -1,5 +1,6 @@
 import { MenuOutlined } from "@ant-design/icons";
 import { Avatar, Badge, Button } from "antd";
+import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { HiOutlineBell } from "react-icons/hi";
 
@@ -47,7 +48,7 @@ const HeaderContent = ({ toggleCollapsed }: any) => {
                 <Avatar className=" cursor-pointer" style={{ backgroundColor: "#5A015E" }} size={55} icon={<Badge size="small" count={5}><HiOutlineBell className="h-7 w-7 text-white" /></Badge>} />
 
                 <div className="flex items-center gap-4">
-                    <Avatar className=" ring-2 ring-[#5A015E]" src={'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} size={53} ></Avatar>
+                    <Link href={`/profile/edit-profile`}><Avatar className=" ring-2 ring-[#5A015E]" src={'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} size={53} ></Avatar></Link>
                     <p className=" text-3xl font-semibold">Akash</p>
                 </div>
             </div>

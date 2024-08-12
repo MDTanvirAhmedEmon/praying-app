@@ -35,7 +35,6 @@ const LoginForm = () => {
                     <Form.Item
                         name="username"
                         label="Email"
-                        rules={[{ required: true, message: 'Please input your Email!' }]}
                         style={{}}
                     >
                         <Input style={{ padding: "8px" }} className=' text-lg' placeholder="your email" />
@@ -43,7 +42,6 @@ const LoginForm = () => {
                     <Form.Item
                         name="password"
                         label="Password"
-                        rules={[{ required: true, message: 'Please input your Password!' }]}
                     >
                         <Input style={{ padding: "8px" }} className=' text-lg' type="password" placeholder="Password" />
                     </Form.Item>
