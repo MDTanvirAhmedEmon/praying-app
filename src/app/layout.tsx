@@ -27,15 +27,11 @@ export default function RootLayout({
               hoverBorderColor: "#5A015E",
               activeBorderColor: "#5A015E",
             },
-            Pagination: {
-              itemActiveBg: "black",
-              itemBg: "transparent",
-            },
 
           },
         }}
       >
-        <body className={inter.className}>{children}</body>
+        <body style={{ backgroundColor: "white"}} className={inter.className}>{children}</body>
       </ConfigProvider>
     </html>
     // </StyleProvider>

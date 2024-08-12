@@ -25,7 +25,13 @@ const MenuContent = ({ collapsed }: any) => {
         { key: '6', icon: <Image src={product} width={30} height={30} alt="dashboard" />, label: <Link href={`/product`}>Product</Link> },
         { key: '7', icon: <Image src={order} width={30} height={30} alt="dashboard" />, label: <Link href={`/order-list`}>Order List</Link> },
         { key: '8', icon: <Image src={event} width={30} height={30} alt="dashboard" />, label: <Link href={`/event`}>Event</Link> },
-        { key: '9', icon: <Image src={setting} width={30} height={30} alt="dashboard" />, label: <Link href={`/setting`}>Setting</Link> },
+        {
+            key: '9', icon: <Image src={setting} width={30} height={30} alt="dashboard" />, children: [
+                { key: '10', label: <Link href={`/setting/about-us`}>About us</Link> },
+                { key: '11', label: <Link href={`/`}>Terms & Condition</Link> },
+                { key: '12', label: <Link href={`/`}>Privacy Policy</Link> },
+            ], label: "Setting"
+        },
 
     ]
     const itemHeight = collapsed ? "40px" : "50px";
@@ -63,7 +69,26 @@ const MenuContent = ({ collapsed }: any) => {
                         color: white !important;
 
                     }
-                    
+                        .ant-menu-submenu-title {
+                        background-color: #5A015E !important;
+                        color: white !important;
+                        border-radius: 4px !important;
+                        margin-bottom: 15px !important;
+                        font-size: 16px !important;
+                        height: ${itemHeight} !important;
+                        }
+                    :where(.css-dev-only-do-not-override-o2xk72).ant-menu-dark .ant-menu-submenu-selected >.ant-menu-submenu-title{
+                        background-color: #5A015E !important;
+                        color: white !important;
+                        border-radius: 4px !important;
+                        margin-bottom: 15px !important;
+                        font-size: 16px !important;
+                        height: ${itemHeight} !important;                        
+                        }
+                        :where(.css-dev-only-do-not-override-o2xk72).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline{
+                            background: #ffffff !important;
+                        }
+
                     
             `}</style>
 

@@ -1,5 +1,5 @@
 "use client";
-import { Select, Typography } from 'antd';
+import { ConfigProvider, Select, Typography } from 'antd';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
 
@@ -25,17 +25,32 @@ const AreaChartBox = () => {
         <div className='bg-[#F0BE1B] rounded-lg p-8 w-full md:w-1/2'>
             <div className='flex justify-between items-center mb-3'>
                 <Typography.Title level={3}>User Overview</Typography.Title>
-                <Select
-                    value={selectedYear}
-                    style={{ width: 120 }}
-                    onChange={handleChange}
-                    options={[
-                        { value: '2024', label: '2024' },
-                        { value: '2025', label: '2025' },
-                        { value: '2026', label: '2026' },
-                        { value: '2027', label: '2027' },
-                    ]}
-                />
+                <ConfigProvider
+                    theme={{
+                        components: {
+                            Select: {
+                                colorBgContainer: "transparent",
+                                colorBorder: "black",
+                                colorPrimaryHover: "black",
+                                fontSizeIcon: 14,
+                                colorIcon: "black",
+                            },
+                        },
+                    }}
+                >
+
+                    <Select
+                        value={selectedYear}
+                        style={{ width: 120 }}
+                        onChange={handleChange}
+                        options={[
+                            { value: '2024', label: '2024' },
+                            { value: '2025', label: '2025' },
+                            { value: '2026', label: '2026' },
+                            { value: '2027', label: '2027' },
+                        ]}
+                    />
+                </ConfigProvider>
             </div>
             <ResponsiveContainer width="100%" height={300}>
                 <AreaChart
@@ -52,6 +67,7 @@ const AreaChartBox = () => {
                     <YAxis />
                     <Tooltip />
                     <Area
+                        activeDot={false}
                         type="monotone"
                         dataKey="uv"
                         strokeWidth={0}

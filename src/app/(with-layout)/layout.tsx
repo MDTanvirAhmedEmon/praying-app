@@ -14,6 +14,8 @@ export default function DashBoardLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
+    
     const [collapsed, setCollapsed] = useState<boolean>(false);
 
     const toggleCollapsed = () => {
@@ -24,7 +26,7 @@ export default function DashBoardLayout({
     return (
 
         <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed} style={{ height: "100vh", backgroundColor: "white" }} width="16%">
+            <Sider trigger={null} collapsible collapsed={collapsed} style={{  height: "100vh", backgroundColor: "white" , paddingBottom: "50px" }} width="16%">
                 <SiderContent></SiderContent>
                 <MenuContent collapsed={collapsed}></MenuContent>
             </Sider>
@@ -54,6 +56,9 @@ export default function DashBoardLayout({
                                 colorBgContainer: "#F0BE1B",
                                 colorText: "black",
                             },
+                            Pagination: {
+                                colorPrimaryBorder: "black"
+                              },
                         },
                     }}
                 >
