@@ -37,6 +37,8 @@ const ProfileTopBar = () => {
                             Menu: {
                                 darkItemBg: "transparent",
                                 // itemHoverColor: "transparent",   
+                                itemBg: "transparent",
+                                itemActiveBg: "transparent",
 
                             },
                         },

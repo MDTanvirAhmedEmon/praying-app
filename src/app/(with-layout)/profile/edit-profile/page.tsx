@@ -1,4 +1,5 @@
 import EditProfileForm from "@/components/(withLayout)/Profile/EditProfile/EditProfileForm";
+import dynamic from "next/dynamic";
 
 
 const EditProfile = () => {
@@ -9,4 +10,7 @@ const EditProfile = () => {
     );
 };
 
-export default EditProfile;
+// export default EditProfile;
+export default dynamic(() => Promise.resolve(EditProfile), {
+    ssr: false
+})

@@ -21,7 +21,7 @@ const MenuContent = ({ collapsed }: any) => {
         { key: '2', icon: <Image src={accounts} width={30} height={30} alt="dashboard" />, label: <Link href={`/accounts-details`}>Accounts Details</Link> },
         { key: '3', icon: <Image src={earning} width={30} height={30} alt="dashboard" />, label: <Link href={`/earning`}>Earning</Link> },
         { key: '4', icon: <Image src={educational} width={30} height={30} alt="dashboard" />, label: <Link href={`/educational-resources`}>Educational Resources</Link> },
-        { key: '5', icon: <Image src={training} width={30} height={30} alt="dashboard" />, label: <Link href={`/training-workshop`}>Training & Workshop</Link> },
+        { key: '5', icon: <Image src={training} width={30} height={30} alt="dashboard" />, label: <Link href={`/listen-and-learn`}>Listen & Learn</Link> },
         { key: '6', icon: <Image src={product} width={30} height={30} alt="dashboard" />, label: <Link href={`/product`}>Product</Link> },
         { key: '7', icon: <Image src={order} width={30} height={30} alt="dashboard" />, label: <Link href={`/order-list`}>Order List</Link> },
         { key: '8', icon: <Image src={event} width={30} height={30} alt="dashboard" />, label: <Link href={`/event`}>Event</Link> },
@@ -48,7 +48,7 @@ const MenuContent = ({ collapsed }: any) => {
                 }}
             >
                 <Menu
-                    defaultSelectedKeys={['1']}
+                    // defaultSelectedKeys={['1']}
                     defaultOpenKeys={['sub1']}
                     mode="inline"
                     theme="dark"

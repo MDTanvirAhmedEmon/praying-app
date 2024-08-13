@@ -22,6 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <ConfigProvider
         theme={{
+          token: {
+            fontFamily: "Roboto",
+          },
           components: {
             Input: {
               hoverBorderColor: "#5A015E",
