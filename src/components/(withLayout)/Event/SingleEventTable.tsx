@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
-const OrderTable = () => {
+const SingleEventTable = () => {
 
     const dataSource = [
         {
@@ -17,66 +17,25 @@ const OrderTable = () => {
         {
             key: '2',
             orderId: '2',
-            Product: 'Hoodie',
-            Date: '12 Oct 2024',
-            customerName: 'Sara',
-            Status: false,
-            Amount: 200,
+            Date: '11 Oct 2024',
+            customerName: 'Emon',
+            Amount: 150,
         },
         {
             key: '3',
             orderId: '3',
-            Product: 'Denim Jacket',
-            Date: '13 Oct 2024',
-            customerName: 'John',
-            Status: true,
-            Amount: 180,
+            Date: '11 Oct 2024',
+            customerName: 'Emon',
+            Amount: 150,
         },
         {
             key: '4',
             orderId: '4',
-            Product: 'Sweater',
-            Date: '14 Oct 2024',
-            customerName: 'Lisa',
-            Status: true,
-            Amount: 140,
+            Date: '11 Oct 2024',
+            customerName: 'Emon',
+            Amount: 150,
         },
-        {
-            key: '5',
-            orderId: '5',
-            Product: 'Casual Shirt',
-            Date: '15 Oct 2024',
-            customerName: 'Michael',
-            Status: false,
-            Amount: 130,
-        },
-        {
-            key: '6',
-            orderId: '6',
-            Product: 'Jacket',
-            Date: '16 Oct 2024',
-            customerName: 'Anna',
-            Status: false,
-            Amount: 200,
-        },
-        {
-            key: '7',
-            orderId: '7',
-            Product: 'Blazer',
-            Date: '17 Oct 2024',
-            customerName: 'David',
-            Status: true,
-            Amount: 220,
-        },
-        {
-            key: '8',
-            orderId: '8',
-            Product: 'Polo Shirt',
-            Date: '18 Oct 2024',
-            customerName: 'Emma',
-            Status: false,
-            Amount: 110,
-        },
+        
     ];
 
     const columns = [
@@ -84,12 +43,6 @@ const OrderTable = () => {
             title: 'Order Id',
             dataIndex: 'orderId',
             key: 'orderId',
-            align: 'center',
-        },
-        {
-            title: 'Product',
-            dataIndex: 'Product',
-            key: 'Product',
             align: 'center',
         },
         {
@@ -105,13 +58,6 @@ const OrderTable = () => {
             align: 'center',
         },
         {
-            title: 'Status',
-            dataIndex: 'Status',
-            key: 'Status',
-            align: 'center',
-            render: (status: boolean) => (status ? 'Completed' : 'Pending'),
-        },
-        {
             title: 'Amount',
             dataIndex: 'Amount',
             key: 'Amount',
@@ -119,12 +65,6 @@ const OrderTable = () => {
         },
     ];
 
-
-    const router = useRouter();
-    const handleRowClick = (recordId: any) => {
-        console.log(recordId)
-        router.push(`/order-list/${recordId}`);
-    };
 
     // pagination
     const [currentPage, setCurrentPage] = useState<number>(1);
@@ -138,8 +78,8 @@ const OrderTable = () => {
 
     return (
         <>
-            <div className="bg-[#EFE6EF] rounded-md pb-10">
-                <p className="text-2xl font-bold ml-20 pt-6">Recent Purchases</p>
+            <div className="bg-white rounded-md mt-8 pb-10">
+                <p className="text-2xl font-bold ml-6 pt-6">Event Ticket Purchases</p>
 
                 <ConfigProvider
                     theme={{
@@ -147,8 +87,8 @@ const OrderTable = () => {
                             Table: {
                                 bodySortBg: "#F0BE1B",
                                 borderColor: "#00000026",
-                                headerBg: "transparent",
-                                colorBgContainer: "transparent",
+                                headerBg: "white",
+                                colorBgContainer: "white",
                                 colorText: "black",
                                 headerColor: "black",
                             },
@@ -156,14 +96,11 @@ const OrderTable = () => {
                     }}
                 >
                     <Table
-                        className="px-10 h-auto"
+                        className="px-6 h-auto"
                         align="center"
                         dataSource={dataSource}
                         columns={columns}
                         pagination={false}
-                        onRow={(record) => ({
-                            onClick: () => handleRowClick(record.orderId),
-                        })}
                     />
                 </ConfigProvider>
 
@@ -174,7 +111,8 @@ const OrderTable = () => {
                     current={currentPage}
                     pageSize={pageSize}
                     total={totalItems}
-                    onChange={handlePageChange} defaultCurrent={1}
+                    defaultCurrent={1}
+                    onChange={handlePageChange} 
                 />
 
             </div>
@@ -182,4 +120,4 @@ const OrderTable = () => {
     );
 };
 
-export default OrderTable;
+export default SingleEventTable;

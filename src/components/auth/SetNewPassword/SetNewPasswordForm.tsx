@@ -31,13 +31,13 @@ const SetNewPasswordForm = () => {
                     className=' bg-[#71cde044] py-10 px-10 rounded-2xl w-[450px] border-2 border-[#400c42]'
                 >
                     <div className='mb-4 text-center'>
-                        <Typography.Title level={4} style={{ color: "white" }} className=' text-center '>Set a new password</Typography.Title>
-                        <Typography.Text className='text-white text-center'>Create a new password. Ensure it differs from</Typography.Text>
-                        <Typography.Text className='text-white text-center'> previous ones for security</Typography.Text>
+                        <h2 style={{ color: "white" }} className=' text-center text-2xl  mb-6'>Set a new password</h2>
+                        <p className='text-white text-center text-lg'>Create a new password. Ensure it differs from</p>
+                        <p className='text-white text-center text-lg mt-[-6px]'> previous ones for security</p>
                     </div>
 
                     <Form.Item
-                        label="Password"
+                        label={<p className=' text-lg'>Password</p>}
                         name="password"
                         rules={[{ required: true, message: 'Please input your new password!' }]}
                     >
@@ -45,8 +45,8 @@ const SetNewPasswordForm = () => {
                     </Form.Item>
 
                     <Form.Item
-                        label="Comfirm Password"
-                        name="comfirmPassword"
+                        label={<p className=' text-lg'>Confirm Password</p>}
+                        name="confirmPassword"
                         rules={[{ required: true, message: 'Please input comfirm password!' }]}
                     >
                         <Input.Password style={{ padding: "8px" }} className=' text-lg' placeholder="Confirm password" />
@@ -65,7 +65,7 @@ const SetNewPasswordForm = () => {
                                 },
                             },
                         }} wave={{ disabled: true }}>
-                            <Button className=' bg-[#5A015E] text-white px-6 py-5' htmlType="submit">
+                            <Button className=' bg-[#5A015E] text-white px-6 py-5 text-lg' htmlType="submit">
                                 Update Password
                             </Button>
                         </ConfigProvider>

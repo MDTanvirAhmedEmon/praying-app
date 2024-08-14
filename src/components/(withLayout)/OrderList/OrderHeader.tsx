@@ -8,8 +8,9 @@ const OrderHeader = () => {
             </div>
             <div>
                 <div>
-                    <button className="flex items-center py-2 px-3 cursor-text text-white gap-1 bg-slate-400 rounded-sm">
-                        <LuCalendarDays className=" w-5 h-5" /> <span>Feb 15, 2024</span>
+                    <button className="flex gap-2 items-center py-3 px-6 cursor-text text-white bg-[#727272] rounded-sm">
+                        <LuCalendarDays className=" w-4 h-4" />
+                        <p className=" text-base">Feb 15, 2024</p>
                     </button>
 
                 </div>

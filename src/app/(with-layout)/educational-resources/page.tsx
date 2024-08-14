@@ -143,6 +143,7 @@ const EducationalResources = () => {
                         total={totalItems}
                         onChange={handlePageChange} defaultCurrent={1}
                     />
+                    
                 </div>
 
             </div>

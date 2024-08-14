@@ -2,3 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+
+span.anticon.anticon-left {
+    color: white;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+span.anticon.anticon-right {
+    color: white;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+
+/* pagination */
+:where(.css-dev-only-do-not-override-1ndju6b).ant-pagination .ant-pagination-item-active {
+    background-color: white !important;
+    border: none !important;
+}
+
+:where(.css-dev-only-do-not-override-1ndju6b).ant-pagination .ant-pagination-item-active a {
+    color: black!important;
+}
+:where(.css-dev-only-do-not-override-1ndju6b).ant-pagination .ant-pagination-item {
+    background-color: #ffffff00;
+}
+
+:where(.css-dev-only-do-not-override-1ndju6b).ant-pagination .ant-pagination-item a {
+    color: rgb(243 243 243 / 88%);
+}
+
+/* pagination table */
+
+
+
+
+/* table */
+thead.ant-table-thead tr th {
+    font-size: 18px;
+}
+
+tbody.ant-table-tbody tr td {
+    font-size: 16px;
+}
+
+/* form password icon color */
+.ant-input-suffix span.anticon.anticon-eye-invisible.ant-input-password-icon {
+    color: white;
+    font-size: 18px;
+}
+.ant-input-suffix span.anticon.anticon-eye.ant-input-password-icon {
+    color: white;
+    font-size: 18px;
+}
+
+/* profile Notification */
+:where(.css-dev-only-do-not-override-1ndju6b).ant-notification .ant-notification-notice-wrapper .ant-notification-notice-with-icon .ant-notification-notice-message {
+    margin-bottom: 0px;
+}
+
+:where(.css-dev-only-do-not-override-1ndju6b).ant-notification .ant-notification-notice-wrapper .ant-notification-notice-icon-info.anticon {
+    color: #5A015E;
+}
+

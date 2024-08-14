@@ -22,7 +22,7 @@ const BarChartBox = () => {
   };
 
   return (
-    <div className='bg-[#F0BE1B] rounded-lg p-8 w-1/2'>
+    <div className='bg-[#FDFDFD] rounded-lg p-8 w-1/2'>
       <div className='flex justify-between items-center mb-3'>
         <Typography.Title level={3}>Earning Overview</Typography.Title>
         <Typography.Text className=' text-xl mb-2' >Monthly Growth: 35.80%</Typography.Text>

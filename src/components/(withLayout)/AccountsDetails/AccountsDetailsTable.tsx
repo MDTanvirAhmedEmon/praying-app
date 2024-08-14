@@ -25,8 +25,6 @@ const AccountsDetailsTable = () => {
         setIsModalOpen(false);
     };
 
-
-
     const dataSource = [
         { key: '1', serial: '1', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
         { key: '2', serial: '2', name: 'Mike', email: 'email@gmail.com', date: '11 Oct 2024, 11:00 PM' },
@@ -66,26 +64,28 @@ const AccountsDetailsTable = () => {
 
     return (
         <>
-            {/* <ConfigProvider
+            <ConfigProvider
                 theme={{
                     components: {
                         Table: {
-                            colorBgContainer: "#F0BE1B",
+                            bodySortBg: "#F0BE1B",
+                            borderColor: "#00000026",
+                            headerBg: "#F0BE1B",
+                            colorBgContainer: "#FDFDFD",
                             colorText: "black",
-                            headerBg: "#360138",
-                            headerColor: "white",
-                            borderColor: "black",
+                            headerColor: "black",
+                            headerSplitColor: "transparent",
                         },
                     },
                 }}
-            > */}
+            >
                 <Table
                     align="center"
                     dataSource={dataSource}
                     columns={columns}
                 />
 
-            {/* </ConfigProvider> */}
+            </ConfigProvider>
             <BlockAccoutModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></BlockAccoutModal>
         </>
     );

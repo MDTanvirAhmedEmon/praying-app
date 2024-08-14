@@ -1,6 +1,6 @@
 
-import { Table } from "antd";
-import './DashboardTable.css'
+import { ConfigProvider, Table } from "antd";
+
 
 
 const DashboardTable = () => {
@@ -85,24 +85,24 @@ const DashboardTable = () => {
 
     return (
         <div>
-            {/* <ConfigProvider
+            <ConfigProvider
                 theme={{
                     components: {
                         Table: {
-                            
                             bodySortBg: "#F0BE1B",
-                            borderColor: "black",
-                            headerBg: "#544309",
-                            headerColor: "white",
-                            colorBgContainer: "#F0BE1B",
+                            borderColor: "#00000026",
+                            headerBg: "#F0BE1B",
+                            colorBgContainer: "#FDFDFD",
                             colorText: "black",
+                            headerColor: "black",
+                            headerSplitColor: "transparent",
                         },
                     },
                 }}
-            > */}
-            <Table align="center" style={{}} dataSource={dataSource} columns={columns} />
+            >
+                <Table className=" rounded-md" align="center" style={{}} dataSource={dataSource} columns={columns} />
 
-            {/* </ConfigProvider> */}
+            </ConfigProvider>
 
         </div>
     );

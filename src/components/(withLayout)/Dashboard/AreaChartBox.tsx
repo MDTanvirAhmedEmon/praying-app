@@ -22,7 +22,7 @@ const AreaChartBox = () => {
     };
 
     return (
-        <div className='bg-[#F0BE1B] rounded-lg p-8 w-full md:w-1/2'>
+        <div className='bg-[#FDFDFD] rounded-lg p-8 w-full md:w-1/2'>
             <div className='flex justify-between items-center mb-3'>
                 <Typography.Title level={3}>User Overview</Typography.Title>
                 <ConfigProvider

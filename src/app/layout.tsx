@@ -1,11 +1,13 @@
 // "use client";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import { ConfigProvider } from "antd";
 // import { StyleProvider } from "@ant-design/cssinjs";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700" ]});
+// const roboto2 = Roboto({ subsets: ["latin"], weight: "700" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -34,7 +36,7 @@ export default function RootLayout({
           },
         }}
       >
-        <body style={{ backgroundColor: "white"}} className={inter.className}>{children}</body>
+        <body style={{ backgroundColor: "white"}} className={roboto.className}>{children}</body>
       </ConfigProvider>
     </html>
     // </StyleProvider>

@@ -3,7 +3,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 
 const NotificationTopBar = ({ showNotification, setShowNotification }: any) => {
     return (
-        <div className=" bg-[#FEF9E8] shadow-md px-8 py-3 w-[400px] absolute right-[220px] top-[90px] z-50 rounded-b-md">
+        <div className=" bg-[#FEF9E8] shadow-md px-8 py-3 w-[400px] absolute right-[220px] top-[9vh] z-50 rounded-b-md">
             <h1 className=" text-primary font-semibold text-center text-2xl">Notification</h1>
             {/* <ConfigProvider
                 theme={{

@@ -15,7 +15,7 @@ export default function DashBoardLayout({
     children: React.ReactNode;
 }>) {
 
-    
+
     const [collapsed, setCollapsed] = useState<boolean>(false);
 
     const toggleCollapsed = () => {
@@ -26,11 +26,11 @@ export default function DashBoardLayout({
     return (
 
         <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed} style={{  height: "100vh", backgroundColor: "white" , paddingBottom: "50px" }} width="16%">
+            <Sider trigger={null} collapsible collapsed={collapsed} style={{ height: "100vh", backgroundColor: "white", paddingBottom: "50px", position: "fixed", top: "0px", left: "0px",  }} width="16%">
                 <SiderContent></SiderContent>
                 <MenuContent collapsed={collapsed}></MenuContent>
             </Sider>
-            <Layout>
+            <Layout style={{ marginLeft: collapsed ? '80px' : '16%', transitionDuration: "0.2s" }}>
                 <ConfigProvider
                     theme={{
                         components: {
@@ -38,10 +38,22 @@ export default function DashBoardLayout({
                                 headerPadding: "0 0px"
                             },
 
+                            Pagination: {
+                                // colorPrimary: "black",
+                                // colorBorder: "black",
+                                // itemBg: "white",
+                                // itemActiveBg: "white",
+                                // colorBgTextActive: "white",
+                                // colorBgTextHover: "white",
+                                // colorPrimaryHover: "black",
+                                // colorPrimaryBorder: "black",
+                            },
+
+
                         },
                     }}
                 >
-                    <Header style={{ backgroundColor: "white", width: "100%", height: "90px" }}><HeaderContent toggleCollapsed={toggleCollapsed}></HeaderContent></Header>
+                    <Header style={{ backgroundColor: "white", width: "100%", height: "9vh" }}><HeaderContent toggleCollapsed={toggleCollapsed}></HeaderContent></Header>
                 </ConfigProvider>
 
                 <ConfigProvider
@@ -56,13 +68,10 @@ export default function DashBoardLayout({
                                 colorBgContainer: "#F0BE1B",
                                 colorText: "black",
                             },
-                            Pagination: {
-                                colorPrimaryBorder: "black"
-                              },
                         },
                     }}
                 >
-                    <Content style={{ backgroundColor: "#5A015E", borderTopLeftRadius: "10px", padding: "30px" }}> <h1 className="text-black"></h1>{children}</Content>
+                    <Content style={{ backgroundColor: "#5A015E", borderTopLeftRadius: "10px", padding: "30px", minHeight: "91vh" }}> <h1 className="text-black"></h1>{children}</Content>
                 </ConfigProvider>
             </Layout>
         </Layout>

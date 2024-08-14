@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const ProfileTopBar = () => {
     const items = [
-        { key: '1', label: <Link href={`/profile/edit-profile`}>Edit Profile</Link> },
-        { key: '2', label: <Link href={`/profile/change-password`}>Change Password</Link> },
+        { key: '12', label: <Link className=" text-base" href={`/profile/edit-profile`}>Edit Profile</Link> },
+        { key: '23', label: <Link className=" text-base" href={`/profile/change-password`}>Change Password</Link> },
     ]
 
 
