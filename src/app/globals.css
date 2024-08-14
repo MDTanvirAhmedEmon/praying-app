@@ -14,6 +14,7 @@ span.anticon.anticon-right {
     font-size: 29px;
     font-weight: 800;
 }
+/* menu  */
 
 
 /* pagination */
@@ -35,6 +36,16 @@ span.anticon.anticon-right {
 
 /* pagination table */
 
+:where(.css-dev-only-do-not-override-1wrqmuk).ant-pagination .ant-pagination-item-active a {
+    color: #000000;
+}
+
+:where(.css-dev-only-do-not-override-1wrqmuk).ant-pagination .ant-pagination-item-active {
+    font-weight: 600;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+}
 
 
 

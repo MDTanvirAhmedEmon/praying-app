@@ -7,12 +7,11 @@ const EarningModal = ({ isModalOpen, handleOk, handleCancel }: any) => {
         <Modal
             centered
             footer={null}
-            title="Earning Details"
             open={isModalOpen}
             onOk={handleOk}
             onCancel={handleCancel}
         >
-            <div className=" bg-primary rounded-md py-6">
+            <div className=" bg-primary rounded-md py-6 mt-8" >
                 <div className="flex justify-center items-center">
                     <div className="relative w-[140px] h-[140px] ">
                         <Image

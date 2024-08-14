@@ -57,7 +57,7 @@ const HeaderContent = ({ toggleCollapsed }: any) => {
                         <div className="relative ">
                             <HiOutlineBell className="h-7 w-7 text-white" />
                             <span className="bg-red-600 text-white rounded-full w-4 h-4 absolute text-xs top-[-4px] right-[-2px] ">
-                                5
+                                3
                             </span>
                         </div>
                     } />

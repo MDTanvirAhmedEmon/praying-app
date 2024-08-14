@@ -26,12 +26,14 @@ const MenuContent = ({ collapsed }: any) => {
         { key: '7', icon: <Image src={order} width={25} height={25} alt="order" />, label: <Link href={`/order-list`}>Order List</Link> },
         { key: '8', icon: <Image src={event} width={25} height={25} alt="event" />, label: <Link href={`/event`}>Event</Link> },
         {
-            key: '9', icon: <Image src={setting} width={25} height={25} alt="setting" />, children: [
+            key: '9', icon: <Image src={setting} width={25} height={25} alt="setting" />,
+            label: "Setting",
+            children: [
                 { key: '10', label: <Link href={`/setting/category`}>Category</Link> },
                 { key: '11', label: <Link href={`/setting/about-us`}>About us</Link> },
                 { key: '12', label: <Link href={`/setting/terms-and-conditions`}>Terms & Condition</Link> },
                 { key: '13', label: <Link href={`/setting/privacy-policy`}>Privacy Policy</Link> },
-            ], label: "Setting"
+            ],
         },
 
     ]
@@ -78,7 +80,7 @@ const MenuContent = ({ collapsed }: any) => {
                         font-size: 16px !important;
                         height: ${itemHeight} !important;
                         }
-                      :where(.css-dev-only-do-not-override-o2xk72).ant-menu-dark .ant-menu-submenu-selected >.ant-menu-submenu-title{
+                      .ant-menu-submenu-title .ant-menu-submenu-title{
                         background-color: transparent !important;
                         color: #5A015E !important;
                         border-radius: 4px !important;
@@ -91,11 +93,14 @@ const MenuContent = ({ collapsed }: any) => {
                         }
                         :where(.css-dev-only-do-not-override-9rz8em).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline, :where(.css-dev-only-do-not-override-9rz8em).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline {
                         background: #000c1700;
-                        }`
-                        
+                        }
+                        :where(.css-dev-only-do-not-override-9rz8em).ant-menu-dark.ant-menu-submenu-popup>.ant-menu, :where(.css-dev-only-do-not-override-9rz8em).ant-menu-dark>.ant-menu.ant-menu-submenu-popup>.ant-menu {
+                        background-color: #ffffff;
+                        padding: ${collapsed? "10px": "0px"}
+}
+`
 
-                        
-                        }</style>
+                }</style>
 
                 {/* padding: ${itemPadding} !important; */}
             </ConfigProvider>
