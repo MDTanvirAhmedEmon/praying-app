@@ -11,6 +11,8 @@ const data = [
   { name: 'Page E', uv: 1890, pv: 4800, amt: 2181 },
   { name: 'Page F', uv: 2390, pv: 3800, amt: 2500 },
   { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 },
+  { name: 'Page H', uv: 3490, pv: 4300, amt: 2100 },
+  { name: 'Page I', uv: 3490, pv: 4300, amt: 2100 },
 ];
 
 const BarChartBox = () => {
@@ -55,6 +57,7 @@ const BarChartBox = () => {
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
           data={data}
+
           margin={{
             top: 0,
             right: 0,
@@ -63,11 +66,11 @@ const BarChartBox = () => {
           }}
           barSize={20}
         >
-          <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
-          <YAxis />
+          <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} tickMargin={10} tickLine={false} axisLine={false} />
+          <YAxis axisLine={false} tickLine={false} tickMargin={20} />
           <Tooltip />
-          <CartesianGrid horizontal={true} vertical={false} stroke="black" strokeDasharray="0" />
-          <Bar background={false} dataKey="pv" fill="#232323" stroke="#000f25" />
+          <CartesianGrid opacity={0.2} horizontal={true} vertical={false} stroke="black" strokeDasharray="0" />
+          <Bar barSize={12} radius={10} background={false} dataKey="pv" fill="#232323" stroke="#000f25" />
         </BarChart>
       </ResponsiveContainer>
     </div>

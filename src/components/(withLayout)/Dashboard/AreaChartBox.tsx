@@ -58,13 +58,13 @@ const AreaChartBox = () => {
                     margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
                 >
                     <defs>
-                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="20%" stopColor="#000000" stopOpacity={1} />
-                            <stop offset="95%" stopColor="#000000" stopOpacity={0} />
+                        <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="30%" stopColor="#080E0E" stopOpacity={1} />
+                            <stop offset="100%" stopColor="#758888" stopOpacity={0.4} />
                         </linearGradient>
                     </defs>
-                    <XAxis dataKey="name" />
-                    <YAxis />
+                    <XAxis axisLine={false} tickLine={false} dataKey="name" />
+                    <YAxis tickMargin={20} axisLine={false} tickLine={false} />
                     <Tooltip />
                     <Area
                         activeDot={false}
@@ -72,7 +72,7 @@ const AreaChartBox = () => {
                         dataKey="uv"
                         strokeWidth={0}
                         stroke="#080E0E"      // Line color
-                        fill="url(#colorUv)" // Gradient fill
+                        fill="url(#color)" // Gradient fill
                     />
                 </AreaChart>
             </ResponsiveContainer>
