@@ -5,7 +5,7 @@ import SiderContent from "@/components/(withLayout)/Layout/SiderContent";
 import { ConfigProvider, Layout } from "antd";
 import { Content, Header } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
-
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
@@ -15,6 +15,9 @@ export default function DashBoardLayout({
     children: React.ReactNode;
 }>) {
 
+    const router = useRouter();
+    const token = { user: "emon" }
+
 
     const [collapsed, setCollapsed] = useState<boolean>(false);
 
@@ -23,10 +26,15 @@ export default function DashBoardLayout({
     };
 
 
+    if (!token.user) {
+        router.push('/auth/login');
+    }
+
+
     return (
 
         <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed} style={{ height: "100vh", backgroundColor: "white", paddingBottom: "50px", position: "fixed", top: "0px", left: "0px",  }} width="16%">
+            <Sider trigger={null} collapsible collapsed={collapsed} style={{ height: "100vh", backgroundColor: "white", paddingBottom: "50px", position: "fixed", top: "0px", left: "0px", }} width="16%">
                 <SiderContent></SiderContent>
                 <MenuContent collapsed={collapsed}></MenuContent>
             </Sider>

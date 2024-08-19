@@ -63,7 +63,7 @@ const AreaChartBox = () => {
                             <stop offset="100%" stopColor="#758888" stopOpacity={0.4} />
                         </linearGradient>
                     </defs>
-                    <XAxis axisLine={false} tickLine={false} dataKey="name" />
+                    <XAxis tickMargin={10} axisLine={false} tickLine={false} dataKey="name" />
                     <YAxis tickMargin={20} axisLine={false} tickLine={false} />
                     <Tooltip />
                     <Area

@@ -137,6 +137,7 @@ const EducationalResources = () => {
                 </div>
                 <div className="py-6">
                     <Pagination
+                        className="custom-pagination-all"
                         align="end"
                         current={currentPage}
                         pageSize={pageSize}

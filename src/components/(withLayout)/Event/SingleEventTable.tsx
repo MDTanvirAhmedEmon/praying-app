@@ -1,6 +1,5 @@
 "use client"
 import { ConfigProvider, Pagination, Table } from "antd";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
@@ -78,7 +77,7 @@ const SingleEventTable = () => {
 
     return (
         <>
-            <div className="bg-white rounded-md mt-8 pb-10">
+            <div className="bg-white rounded-md mt-8 pb-6">
                 <p className="text-2xl font-bold ml-6 pt-6">Event Ticket Purchases</p>
 
                 <ConfigProvider
@@ -96,16 +95,15 @@ const SingleEventTable = () => {
                     }}
                 >
                     <Table
-                        className="px-6 h-auto"
+                        className="px-6 h-auto event-custom-pagination"
                         align="center"
                         dataSource={dataSource}
                         columns={columns}
-                        pagination={false}
                     />
                 </ConfigProvider>
 
             </div>
-            <div className="py-6">
+            {/* <div className="py-6">
                 <Pagination
                     align="end"
                     current={currentPage}
@@ -115,7 +113,7 @@ const SingleEventTable = () => {
                     onChange={handlePageChange} 
                 />
 
-            </div>
+            </div> */}
         </>
     );
 };

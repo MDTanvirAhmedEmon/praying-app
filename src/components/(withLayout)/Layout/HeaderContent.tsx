@@ -16,27 +16,33 @@ const HeaderContent = ({ toggleCollapsed }: any) => {
     console.log(pathname);
 
 
-    const formatPathname = (path: string) => {
+    const formatPathname = (path:any) => {
+        // Check if the path starts with '/setting'
+        if (path.startsWith('/setting')) {
+            return 'Setting';
+        }
+        if (path.startsWith('/profile')) {
+            return 'Profile';
+        }
+
         // Remove leading and trailing slashes
         path = path.replace(/^\/|\/$/g, '');
 
         // Remove dynamic segments (e.g., trailing numbers)
-        const segments = path.split('/').filter(segment => isNaN(Number(segment)));
+        const segments = path.split('/').filter((segment: any) => isNaN(Number(segment)));
 
         // Format the path
         return segments
-            .map(segment =>
+            .map((segment: any) =>
                 segment
                     .split('-') // Split each segment by hyphens
-                    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize each word
+                    .map((word: any) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize each word
                     .join(' ') // Join words with spaces
             )
             .join(' / '); // Join segments with a separator
     };
 
-
     const formattedPathname = pathname === '/' ? 'Dashboard' : formatPathname(pathname);
-
 
     return (
         <div className="w-full h-full flex justify-between items-center relative">

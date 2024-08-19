@@ -6,19 +6,19 @@ import EarningModal from "./EarningModal";
 
 const EarningTable = () => {
 
-// Modal
+    // Modal
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const showModal = () => {
-      setIsModalOpen(true);
+        setIsModalOpen(true);
     };
-  
+
     const handleOk = () => {
-      setIsModalOpen(false);
+        setIsModalOpen(false);
     };
-  
+
     const handleCancel = () => {
-      setIsModalOpen(false);
+        setIsModalOpen(false);
     };
 
 
@@ -88,7 +88,7 @@ const EarningTable = () => {
             date: '11 Oct 2024',
             amount: 150,
         },
-       
+
     ];
 
     const columns = [
@@ -135,7 +135,7 @@ const EarningTable = () => {
 
     return (
         <>
-            <div className="bg-[#FDFDFD] rounded-md pb-6">
+            <div className="bg-[#FDFDFD] rounded-md ">
 
                 <ConfigProvider
                     theme={{
@@ -154,11 +154,11 @@ const EarningTable = () => {
                     }}
                 >
                     <Table
-                        className="h-auto mt-6"
+                        className="h-auto mt-6 table-menu-custom-earning "
                         align="center"
                         dataSource={dataSource}
                         columns={columns}
-                        pagination={false}
+
                     />
                 </ConfigProvider>
                 <EarningModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></EarningModal>

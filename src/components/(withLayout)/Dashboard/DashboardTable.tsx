@@ -84,7 +84,7 @@ const DashboardTable = () => {
 
 
     return (
-        <div>
+        <div className=" bg-[#f8f8f8] pb-10 rounded-t-lg rounded-b-md">
             <ConfigProvider
                 theme={{
                     components: {
@@ -96,11 +96,12 @@ const DashboardTable = () => {
                             colorText: "black",
                             headerColor: "black",
                             headerSplitColor: "transparent",
+                            borderRadius: 6,
                         },
                     },
                 }}
             >
-                <Table className=" rounded-md" align="center" style={{}} dataSource={dataSource} columns={columns} />
+                <Table className=" rounded-md table-custom-radius" align="center" style={{}} pagination={false} dataSource={dataSource} columns={columns} />
 
             </ConfigProvider>
 

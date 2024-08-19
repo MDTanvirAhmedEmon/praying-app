@@ -11,12 +11,12 @@ const Dashboard = () => {
         <div>
             <TopInfoBar></TopInfoBar>
 
-            <div className='pt-8 pr-8 flex gap-8'>
+            <div className='pt-8  flex gap-8'>
                 <AreaChartBox></AreaChartBox>
                 <BarChartBox></BarChartBox>
 
             </div>
-            <div className='mt-8 mr-8'>
+            <div className='mt-8 '>
 
                 <DashboardTable></DashboardTable>
             </div>

@@ -64,29 +64,32 @@ const AccountsDetailsTable = () => {
 
     return (
         <>
-            <ConfigProvider
-                theme={{
-                    components: {
-                        Table: {
-                            bodySortBg: "#F0BE1B",
-                            borderColor: "#00000026",
-                            headerBg: "#F0BE1B",
-                            colorBgContainer: "#FDFDFD",
-                            colorText: "black",
-                            headerColor: "black",
-                            headerSplitColor: "transparent",
+            <div className="bg-[#FDFDFD] rounded-md">
+                <ConfigProvider
+                    theme={{
+                        components: {
+                            Table: {
+                                bodySortBg: "#F0BE1B",
+                                borderColor: "#00000026",
+                                headerBg: "#F0BE1B",
+                                colorBgContainer: "#FDFDFD",
+                                colorText: "black",
+                                headerColor: "black",
+                                headerSplitColor: "transparent",
+                            },
                         },
-                    },
-                }}
-            >
-                <Table
-                    align="center"
-                    dataSource={dataSource}
-                    columns={columns}
-                />
+                    }}
+                >
+                    <Table
+                        align="center"
+                        className="table-menu-custom"
+                        dataSource={dataSource}
+                        columns={columns}
+                    />
 
-            </ConfigProvider>
-            <BlockAccoutModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></BlockAccoutModal>
+                </ConfigProvider>
+                <BlockAccoutModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}></BlockAccoutModal>
+            </div>
         </>
     );
 };

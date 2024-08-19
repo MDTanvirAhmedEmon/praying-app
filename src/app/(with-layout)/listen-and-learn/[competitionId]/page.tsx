@@ -60,6 +60,7 @@ const page = ({ params }: any) => {
             <div className="py-6">
                 <Pagination
                     align="end"
+                    className="custom-pagination-all mt-4"
                     current={currentPage}
                     pageSize={pageSize}
                     total={totalItems}

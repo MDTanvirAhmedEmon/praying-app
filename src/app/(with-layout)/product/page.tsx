@@ -146,12 +146,13 @@ const Product = () => {
             <div>
                 <div className=" grid grid-cols-3 gap-8 mt-8 ">
                     {
-                        data.map(data => <ProductCart key={data.id} data={data}></ProductCart>)
+                        data.map(data => <ProductCart key={data?.id} data={data}></ProductCart>)
                     }
                 </div>
                 <div className="py-6">
                     <Pagination
                         align="end"
+                        className="custom-pagination-all"
                         current={currentPage}
                         pageSize={pageSize}
                         total={totalItems}

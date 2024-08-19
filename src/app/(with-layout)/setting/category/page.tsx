@@ -46,6 +46,7 @@ const Category = () => {
             <div className="py-6">
                 <Pagination
                     align="end"
+                    className="custom-pagination-all"
                     current={currentPage}
                     pageSize={pageSize}
                     total={totalItems}

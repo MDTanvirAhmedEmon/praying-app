@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const ProfileTopBar = () => {
     const items = [
-        { key: '12', label: <Link className=" text-base" href={`/profile/edit-profile`}>Edit Profile</Link> },
-        { key: '23', label: <Link className=" text-base" href={`/profile/change-password`}>Change Password</Link> },
+        { key: '/profile/edit-profile', label: <Link className=" text-base" href={`/profile/edit-profile`}>Edit Profile</Link> },
+        { key: '/profile/change-password', label: <Link className=" text-base" href={`/profile/change-password`}>Change Password</Link> },
     ]
 
 
@@ -48,7 +48,7 @@ const ProfileTopBar = () => {
                         className=" flex justify-center mt-5 gap-4"
                         theme="dark"
                         mode="horizontal"
-                        defaultSelectedKeys={['2']}
+                        defaultSelectedKeys={['/profile/edit-profile']}
                         items={items}
                         style={{ flex: 1, minWidth: 0 }}
                     />

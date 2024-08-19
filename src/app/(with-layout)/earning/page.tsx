@@ -8,14 +8,14 @@ import { useState } from "react";
 const Earning = () => {
 
     // pagination
-    const [currentPage, setCurrentPage] = useState<number>(1);
-    const totalItems = 50;
-    const pageSize = 15;
+    // const [currentPage, setCurrentPage] = useState<number>(1);
+    // const totalItems = 50;
+    // const pageSize = 15;
 
-    const handlePageChange = (page: number) => {
-        setCurrentPage(page);
-        console.log(`Current page: ${page}`);
-    };
+    // const handlePageChange = (page: number) => {
+    //     setCurrentPage(page);
+    //     console.log(`Current page: ${page}`);
+    // };
 
     return (
         <>
@@ -23,7 +23,7 @@ const Earning = () => {
                 <EarningTopBar></EarningTopBar>
                 <EarningTable></EarningTable>
             </div>
-            <div className="py-6">
+            {/* <div className="py-6">
                 <Pagination
                     align="end"
                     current={currentPage}
@@ -32,7 +32,7 @@ const Earning = () => {
                     onChange={handlePageChange} defaultCurrent={1}
                 />
 
-            </div>
+            </div> */}
         </>
     );
 };
